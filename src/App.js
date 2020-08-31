@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import SpotifyWebApi from 'spotify-web-api-js'
 import { useStateValue } from './StateProvider'
 
@@ -17,8 +17,7 @@ const spotify = new SpotifyWebApi()
 
 function App() {
 
-  const [ token, setToken ] = useState(null)
-  const [ { user }, dispatch ] = useStateValue()
+  const [{ user, token }, dispatch ] = useStateValue()
 
 useEffect(() => {
   // get the token from URL
@@ -29,7 +28,7 @@ useEffect(() => {
   const _token = hash.access_token
   // save the token to the state
   if (_token) {
-    setToken(_token)
+    dispatch({ type: 'SET_TOKEN', token: _token })
     // giving an acess to spotify api, based on created token
     spotify.setAccessToken(_token)
     spotify.getMe()
@@ -42,7 +41,8 @@ useEffect(() => {
 
   return (
     <div className="app">
-      {token ? <Player /> : <Login /> }
+      {/* passing the spotify as a props for investigating two methods */}
+      {token ? <Player spotiy={spotify}/> : <Login /> }
      </div>
   );
 }
