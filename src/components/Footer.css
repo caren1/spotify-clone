@@ -19,12 +19,19 @@
     padding: 0 100px;
     color: white;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     max-width: 300px;
 }
 
 .footer__right {
     flex: 0.3;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer__rightSlider {
+    width: 50%;
 }
 

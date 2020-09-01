@@ -6,6 +6,9 @@ import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
 import ShuffleIcon from "@material-ui/icons/Shuffle";
 import RepeatIcon from "@material-ui/icons/Repeat";
+import VolumeDownIcon from "@material-ui/icons/VolumeDown";
+import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
+import { Slider } from "@material-ui/core";
 
 
 function Footer() {
@@ -28,7 +31,11 @@ function Footer() {
 
             {/* Volume controls */}
             <div className="footer__right">
-                <p>right</p>
+                <PlaylistPlayIcon />
+                <VolumeDownIcon />
+                <div class="footer__rightSlider">
+                    <Slider />
+                </div>  
             </div>
         </div>
     )
