@@ -46,6 +46,13 @@ useEffect(() => {
       dispatch({
         type: 'SET_PLAYLISTS', playlists
       }))
+
+    spotify.getPlaylist('37i9dQZEVXcEOzwpZefbcG')
+    .then((playlist) => {
+      dispatch({
+        type: 'SET_DISCOVER_WEEKLY', discover_weekly: playlist
+      })
+    })
   }
 }, [])
 
