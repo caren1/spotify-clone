@@ -4,6 +4,7 @@ import Sidebar from './Sidebar'
 import Body from './Body'
 import Footer from './Footer'
 
+
 // Draft for the player page
 // 1 - Sidebar
 // 2 - Body

@@ -17,7 +17,7 @@ function Footer() {
 
             {/* Album and song details  */}
             <div className="footer__left">
-                <img src="" alt="" className="footer__albumLogo"/>
+                <img src="https://i.ytimg.com/vi/Ul8OAKt2z28/hqdefault.jpg" alt="" className="footer__albumLogo"/>
                 <div class="footer__songInfo">
                     <h4>Yeah!</h4>
                     <p>Usher</p>
