@@ -28,13 +28,23 @@ useEffect(() => {
   const _token = hash.access_token
   // save the token to the state
   if (_token) {
+    // saving token to the state
     dispatch({ type: 'SET_TOKEN', token: _token })
+
     // giving an acess to spotify api, based on created token
     spotify.setAccessToken(_token)
+    // saving logged in user to state
     spotify.getMe()
     .then((user) => 
       dispatch({ 
         type: 'SET_USER', user
+      }))
+
+    // saving user's playlists to state
+    spotify.getUserPlaylists()
+    .then((playlists) => 
+      dispatch({
+        type: 'SET_PLAYLISTS', playlists
       }))
   }
 }, [])
