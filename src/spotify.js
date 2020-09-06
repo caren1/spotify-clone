@@ -6,8 +6,9 @@
 export const authEndpoint = "https://accounts.spotify.com/authorize"
 
 // redirect end point
-// as soon as we are logged in, we are redirected to localhost
-const redirectUri = "http://localhost:3000/"
+// as soon as we are logged in, we are redirected to localhost in order to test locally, have to change to localhost
+// const redirectUri = "http://localhost:3000/"
+const redirectUri = "https://spotify-clone-wojt.web.app"
 
 // individual id from spotify from developers
 const clientId = "afe5772f056d4ca989a8079e0037be7b"
