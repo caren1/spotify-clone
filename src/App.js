@@ -17,7 +17,7 @@ const spotify = new SpotifyWebApi()
 
 function App() {
 
-  const [{ user, token }, dispatch ] = useStateValue()
+  const [{ token }, dispatch ] = useStateValue()
 
 useEffect(() => {
   // get the token from URL

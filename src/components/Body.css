@@ -58,3 +58,30 @@
     transition: 0.1s transform ease-in;
     transform: scale(1.08);
 }
+
+@media (max-width: 750px) {
+    .body {
+        flex: 1;
+    }
+
+    .body__info {
+        flex-direction: column;
+    }
+
+    .body__info > img {
+        display: none;
+    }
+
+    .body__infoText > h2{
+        font-size: 35px !important;
+    }
+
+    .body__icons {
+        
+    }
+
+    .body__shuffle {
+        font-size: 40px !important;
+        margin: 20px 0 20px 50px;
+    }
+}

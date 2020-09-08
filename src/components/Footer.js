@@ -18,7 +18,7 @@ function Footer() {
             {/* Album and song details  */}
             <div className="footer__left">
                 <img src="https://i.ytimg.com/vi/Ul8OAKt2z28/hqdefault.jpg" alt="" className="footer__albumLogo"/>
-                <div class="footer__songInfo">
+                <div className="footer__songInfo">
                     <h4>Yeah!</h4>
                     <p>Usher</p>
                 </div>
@@ -37,7 +37,7 @@ function Footer() {
             <div className="footer__right">
                 <PlaylistPlayIcon />
                 <VolumeDownIcon />
-                <div class="footer__rightSlider">
+                <div className="footer__rightSlider">
                     <Slider />
                 </div>  
             </div>

@@ -33,7 +33,7 @@ const [{ discover_weekly }] = useStateValue()
                     <MoreHorizIcon />
                 </div>
                 {discover_weekly?.tracks.items.map((item) => (
-                    <SongRow track={item.track}/>
+                    <SongRow key={item.track.name} track={item.track}/>
                 ))}
             </div>
         </div>

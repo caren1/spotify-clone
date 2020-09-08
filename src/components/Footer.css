@@ -70,3 +70,28 @@
     transform: scale(1.2) !important;
 } 
 
+@media (max-width: 750px) {
+
+    .footer {
+        justify-content: center;
+        right: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .footer__left {
+        display: none;
+    }
+
+    .footer__center {
+        flex: 1 1;
+        max-width: 100%;
+    
+    }
+
+    .footer__right {
+        display: none;
+    }
+}
+

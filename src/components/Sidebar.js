@@ -11,19 +11,19 @@ import LibraryMusicIcon from "@material-ui/icons/LibraryMusic"
 
 function Sidebar() {
 
-    const [{ playlists }, dispatch ] = useStateValue()
+    const [{ playlists }] = useStateValue()
 
     return (
         <div className="sidebar">
             <img className="sidebar__logo" src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt="" />
-            <SidebarOption title="Home" Icon={HomeIcon}/>
-            <SidebarOption title="Search" Icon={SearchIcon}/>
-            <SidebarOption title="Your library" Icon={LibraryMusicIcon}/>
+            <SidebarOption key="home" title="Home" Icon={HomeIcon}/>
+            <SidebarOption key="search" title="Search" Icon={SearchIcon}/>
+            <SidebarOption key="library" title="Your library" Icon={LibraryMusicIcon}/>
             <br />
             <strong className="sidebar__title">Playlists</strong>
             <hr />
             {playlists?.items?.map(playlist => (
-                <SidebarOption title={playlist.name}/>
+                <SidebarOption key={playlist.name} title={playlist.name}/>
             ))}
         </div>
     )
